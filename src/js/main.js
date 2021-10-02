@@ -24,5 +24,5 @@ function handleAccordion(e) {
 // Hide/show volunteer options dropdown
 function handleVolunteerSelect(val) {
   const volunteerOptions = document.querySelector("#volunteer-options");
-  volunteerOptions.dataset.isVolunteer = val;
+  volunteerOptions.dataset.isVolunteer = val.toLowerCase();
 }
