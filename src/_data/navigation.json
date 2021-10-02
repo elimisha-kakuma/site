@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Home",
+    "link": "/"
+  },
+  {
+    "text": "Our Program",
+    "link": "/our-program"
+  },
+  {
+    "text": "Who We Are",
+    "link": "/who-we-are"
+  },
+  {
+    "text": "Our Students",
+    "link": "/our-students"
+  },
+  {
+    "text": "Kakuma Camp",
+    "link": "/kakuma-camp"
+  }
+]

@@ -1,0 +1,19 @@
+@use "../utils/fallbacks" as *;
+
+.button {
+  @include color(iced-mocha, background);
+  @include color(white);
+
+  border: none;
+  cursor: pointer;
+  padding: var(--s-4) var(--s0);
+  transition: 100ms opacity linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

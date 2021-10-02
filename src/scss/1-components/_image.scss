@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "../utils/breakpoints" as *;
+
+picture {
+  overflow: hidden;
+
+  &.full-bleed {
+    aspect-ratio: 7/4;
+    position: relative;
+    margin-left: 50%;
+    max-width: 58rem;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+
+  &.rectangle {
+    aspect-ratio: 5 / 3;
+    max-height: 25rem;
+
+    .image {
+      object-position: 50% 20%;
+    }
+  }
+}

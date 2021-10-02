@@ -1,0 +1,16 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+  {# -- Header -- #}
+  {% include "../partials/header.njk" %}
+
+  <main class="main {{ title | slug }}">
+    {%- if imagePath -%}
+      {% image imagePath,
+      imageAltText,
+      "banner wrapper" %}
+    {% endif %}
+    {{ content | safe }}
+  </main>
+
+{% endblock %}

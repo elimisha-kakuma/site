@@ -1,0 +1,17 @@
+header {
+  justify-content: space-between;
+  padding-top: var(--s2);
+  padding-bottom: var(--s3);
+
+  a {
+    text-decoration: none;
+  }
+
+  .stack-exception {
+    --flow-space: 0;
+  }
+
+  &.cluster {
+    --pad: var(--s-1);
+  }
+}

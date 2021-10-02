@@ -1,0 +1,21 @@
+@use "0-global/reset";
+@use "0-global/root";
+@use "0-global/fonts";
+@use "0-global/typography";
+@use "0-global/layouts";
+@use "0-global/helpers";
+
+@use "1-components/accordion";
+@use "1-components/button";
+@use "1-components/footer";
+@use "1-components/form";
+@use "1-components/header";
+@use "1-components/image";
+@use "1-components/link";
+@use "1-components/nav";
+
+@use "2-local/local.scss";
+
+.hidden {
+  display: block;
+}

@@ -1,0 +1,89 @@
+@use "sass:math";
+@use "../utils/get-value" as *;
+@use "../utils/fallbacks" as *;
+@use "../utils/link" as *;
+
+:root {
+  --ratio: 1.3;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  --measure: 100rem;
+  --width-md: calc(var(--measure) / 2);
+  --width-sm: calc(var(--measure) / 3);
+  --flow-space: var(--s2);
+  --text-color: #{get-value(colors, gray-3)};
+  --theme-color: #{get-value(colors, iced-mocha)};
+
+  font-size: calc(1rem + 0.2vw);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--theme-color);
+}
+
+body {
+  @include color(gray-3);
+  min-height: 100vh;
+  word-break: break-word;
+}
+
+a {
+  @include link;
+  color: currentColor;
+}
+
+button a {
+  border: none;
+}
+
+ol[class],
+ul[class] {
+  list-style: none;
+}
+
+
+img {
+  max-height: 30rem;
+  object-fit: cover;
+  object-position: 50% 30%;
+  height: 100%;
+  width: 100%;
+
+  .banner & {
+    min-height: 20rem;
+  }
+}
+
+.dark svg {
+  fill: var(--white, white);
+}
+
+.section {
+  padding-top: var(--s3);
+  padding-bottom: var(--s3);
+
+  picture {
+    --aspect-ratio: 1.5
+    --max-width: calc((var(--measure) / 2));
+
+    aspect-ratio: var(--aspect-ratio);
+    max-width: var(--max-width);
+    max-height: calc(var(--max-width) / var(--aspect-ratio));
+  }
+
+  &.grid,
+  .grid {
+    --column: 50ch;
+    --pad: 5ch;
+  }
+}

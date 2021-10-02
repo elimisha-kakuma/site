@@ -1,0 +1,6 @@
+@use "sass:map";
+@use "../tokens" as *;
+
+@function get-value($token, $property) {
+  @return map.get($tokens, $token, $property);
+}

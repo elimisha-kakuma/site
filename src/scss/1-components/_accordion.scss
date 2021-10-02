@@ -1,0 +1,37 @@
+.accordion {
+  button {
+    --flow-space: var(--s-1);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    text-decoration: underline;
+  }
+
+  &:not(.expanded) {
+    p:first-child {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+    }
+
+    p + p {
+      display: none;
+    }
+  }
+
+  .no-js & {
+    button {
+      display: none;
+    }
+
+    p {
+      display: block !important;
+    }
+  }
+}

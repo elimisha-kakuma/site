@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/sourcesanspro-regular.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/robotocondensed-bold.woff2") format("woff2"),
+    url("/fonts/robotocondensed-bold.woff") format("woff");
+}

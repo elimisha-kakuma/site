@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    {% include "../partials/meta.njk" %}
+
+    {# REMOVE BEFORE SHIPPING #}
+    <meta name="robots" content="noindex">
+
+    {# Styles #}
+    <link rel="preload" as="style" href="/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+
+    <script>
+      document
+        .documentElement
+        .classList
+        .remove("no-js")
+    </script>
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+    {# -- Header + main content -- #}
+    {% block content %}{% endblock %}
+
+    {# -- Footer -- #}
+    {% include "../partials/footer.njk" %}
+  </body>
+</html>

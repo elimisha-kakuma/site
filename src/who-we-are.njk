@@ -1,0 +1,61 @@
+---
+layout: layouts/page
+title: Who We Are
+---
+
+<div class="wrapper" style="--measure: var(--width-md);">
+  <section class="founders stack">
+    <h2>Founders</h2>
+    <div class="grid" style="--column: 40ch;">
+      {%- for founder in founders %}
+        <div class="stack founder">
+          {% set imagePath = ["", founder.image] | join %}
+          {% set altText = ["Headshot of ", founder.name, "."] | join %}
+          {% set cssClasses = "square" -%}
+
+          {% image imagePath,
+          altText %}
+
+          <h3>{{ founder.name }}
+            <span class="pronouns">({{founder.pronouns}})</span></h3>
+          <div class="bio stack">{{founder.bio | safe}}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="facilitators stack section">
+    <h2>Facilitators</h2>
+    <div class="cluster" style="--flow-space: var(--s2);">
+      {%- for facilitator in internsFacilitators.facilitator %}
+        <div class="stack facilitator" style="--flow-space: var(--s1);">
+          {% set imagePath = ["", facilitator.image] | join %}
+          {% set altText = ["Headshot of ", facilitator.name, "."] | join %}
+
+          {% image imagePath,
+          altText %}
+
+          <h3>{{ facilitator.name }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="interns stack section">
+    <h2>Interns</h2>
+    <div class="cluster" style="--flow-space: var(--s2);">
+      {%- for intern in internsFacilitators.intern %}
+        <div class="stack intern" style="--flow-space: var(--s1);">
+          {% set imagePath = ["", intern.image] | join %}
+          {% set altText = ["Headshot of ", intern.name, "."] | join %}
+
+          {% image imagePath,
+          altText %}
+
+          <h3>{{ intern.name }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

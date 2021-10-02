@@ -1,0 +1,77 @@
+---
+layout: layouts/page
+title: Contact
+imagePath: /images/zoom-1.jpeg
+imageAltText: "A screenshot of the students waving on Zoom."
+---
+
+<div class="wrapper stack section" style="--measure: var(--width-md)">
+  <h1>Contact Us</h1>
+  <form name="contact" method="POST" data-netlify="true" class="stack">
+    <div>
+      <label for="name">Your Name: </label>
+      <input type="text" name="name" id="name" />
+    </div>
+
+    <div>
+      <label for="email">Your Email: </label>
+      <input type="email" name="email" id="email" />
+    </div>
+
+    <fieldset style="--pad: var(--s-2)">
+      <legend>I would like to volunteer:</legend>
+      <div>
+        <label class="cluster">
+          <input
+            type="radio"
+            class="volunteer"
+            name="volunteer"
+            id="yes"
+            value="Yes"
+            required
+          />
+          <span>Yes</span>
+        </label>
+      </div>
+
+      <div>
+        <label class="cluster">
+          <input
+            type="radio"
+            class="volunteer"
+            name="volunteer"
+            id="no"
+            value="No"
+          />
+          <span>No</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <select
+      name="volunteer-option"
+      id="volunteer-options"
+      data-is-volunteer="no"
+    >
+      <option value="">-- Please choose a volunteering option --</option>
+      <option value="academic-tutor">Academic Tutor</option>
+      <option value="marketing">Marketing (video, social media)</option>
+      <option value="fundraising">Fundraising/Grant writing</option>
+      <option value="guidance">College Guidance</option>
+    </select>
+
+    <div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="8"></textarea>
+    </div>
+
+    <button class="button" type="submit">Send</button>
+  </form>
+  <noscript>
+    <p class="section">
+      Please enable JavaScript to view our contact form. You can also reach at
+      <a href="mailto:elimishakakuma@gmail.com">elimishakakuma@gmail.com</a> or
+      612-619-9772.
+    </p></noscript
+  >
+</div>

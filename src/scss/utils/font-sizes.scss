@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "sass:math";
+@use "../tokens" as *;
+@use "../vars" as *;
+@use "breakpoints" as *;
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function px-to-rem($px, $base-body-size: 16px) {
+  @return #{math.div($px, $base-body-size)}em;
+}
+
+@function text-grow($power, $type-scale: map.get($tokens, typeScale, lg)) {
+  $unitless-text-base: strip-unit($text-base);
+  $unit: math.unit($text-base);
+
+  @return #{$unitless-text-base * math.pow($type-scale, $power)}#{$unit};
+}
+
+@function text-shrink($power, $type-scale: map.get($tokens, typeScale, lg)) {
+  $unitless-text-base: strip-unit($text-base);
+  $unit: math.unit($text-base);
+
+  @return #{math.div($unitless-text-base, math.pow($type-scale, $power))}#{$unit};
+}
+
+@mixin text-grow-mixin($power) {
+  $type-scale-sm: map.get($tokens, typeScale, sm);
+
+  font-size: text-grow($power, $type-scale-sm);
+
+  @include min-width(md) {
+    font-size: text-grow($power);
+  }
+}
+
+@mixin text-shrink-mixin($power) {
+  $type-scale-sm: map.get($tokens, typeScale, sm);
+
+  font-size: text-shrink($power, $type-scale-sm);
+
+  @include min-width(md) {
+    font-size: text-shrink($power);
+  }
+}

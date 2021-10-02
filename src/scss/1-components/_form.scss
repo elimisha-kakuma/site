@@ -1,0 +1,70 @@
+@use "sass:map";
+@use "sass:math";
+@use "../tokens" as *;
+
+form {
+  max-width: math.div(map.get($tokens, breakpoints, lg), 2);
+}
+
+form,
+form * {
+  color: inherit;
+}
+
+label {
+  display: block;
+}
+
+label[for="checkbox"],
+label[for="radio"] {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  background-color: #fff;
+  border-radius: 0;
+  display: block;
+  font: inherit;
+  border: 1px solid currentColor;
+  padding: var(--s-2) var(--s-2);
+  width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  width: initial;
+}
+
+input[type="checkbox"] ~ *,
+input[type="radio"] ~ * {
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  padding: 0;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' fill='none' stroke='%23333'><path d='M7.5 3L4 6 .5 3'/></svg>");
+  background-size: var(--s-1);
+  background-repeat: no-repeat;
+  background-position: right var(--s-2) center;
+  padding-right: var(--s2);
+}
+
+option {
+  color: var(--text-color);
+}

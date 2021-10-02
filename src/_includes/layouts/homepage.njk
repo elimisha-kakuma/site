@@ -1,0 +1,11 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+  {% include "../partials/header.njk" %}
+  <main class="{{ title | slug }}">
+    {% image "/images/kakuma.jpeg",
+    "An aerial photo showing rows of homes in Kakuma refugee camp.",
+    "banner wrapper" %}
+    {{ content | safe }}
+  </main>
+{% endblock %}

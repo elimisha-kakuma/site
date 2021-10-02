@@ -1,0 +1,7 @@
+@use "../utils/fallbacks" as *;
+
+footer {
+  @include color(light-gray, background-color);
+  padding-top: var(--s4);
+  padding-bottom: var(--s4);
+}

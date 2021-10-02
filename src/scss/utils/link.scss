@@ -1,0 +1,11 @@
+@use "get-value" as *;
+
+@mixin link($color: "iced-mocha") {
+  $link-color: get-value(colors, $color);
+
+  text-decoration: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: $link-color;
+  border-bottom-color: var(--#{$color}, $link-color);
+}

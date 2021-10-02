@@ -1,0 +1,19 @@
+@use "get-value" as *;
+
+// TODO: Need to store bp as pixels, convert to rems
+
+@mixin max-width($size, $diff: 0) {
+  $bp: get-value(breakpoints, $size);
+  $width: $bp + $diff;
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($size, $diff: 0) {
+  $bp: get-value(breakpoints, $size);
+  $width: $bp + $diff;
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

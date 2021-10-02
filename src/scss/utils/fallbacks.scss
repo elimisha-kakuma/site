@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../tokens" as *;
+
+@mixin color($color, $property: color) {
+  $value: map.get($tokens, colors, $color);
+  #{$property}: map.get($tokens, colors, $color);
+  #{$property}: var(--#{$color}, $value);
+}

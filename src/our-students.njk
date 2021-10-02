@@ -1,0 +1,28 @@
+---
+layout: layouts/page
+title: Our Students
+---
+<section class="wrapper students stack" style="--measure: var(--width-md);">
+  <h2>Our Students</h2>
+  <div class="grid" style="--column: 40ch;">
+    {%- for student in students %}
+      <div class="student stack">
+        {% set imagePath = [
+          "/images/students/",
+          (student.name | slug),
+          ".jpeg"
+        ] | join %}
+        {% set altText = ["Headshot of ", student.name] | join %}
+
+        {% image imagePath,
+        altText,
+        "rectangle" %}
+        <h3>{{ student.name }}</h3>
+        <div class="student__bio accordion stack">
+          {{ student.bio | safe }}
+          <button class="accordion__button">More [+]</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
