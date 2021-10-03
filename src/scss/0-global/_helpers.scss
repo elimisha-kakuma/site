@@ -6,7 +6,7 @@
 }
 
 .bleed {
-  --measure: calc(var(--max-width) + (var(--max-width) / 2.5));
+  --measure: calc(var(--max-inner-width) + (var(--max-inner-width) / 3));
 }
 
 .text-align\:center {
@@ -19,6 +19,10 @@
 
 .border-bottom\:none {
   border-bottom: none;
+}
+
+.font-style\:italic {
+  font-style: italic;
 }
 
 .underline {

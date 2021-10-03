@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--pad, var(--s1));
-  row-gap: var(--s-1);
+  row-gap: var(--flow-space);
 }
 
 .grid {

@@ -18,7 +18,7 @@
   --s5: calc(var(--s4) * var(--ratio));
 
   --measure: 75rem;
-  --max-width: 50rem;
+  --max-inner-width: 50rem;
   --flow-space: var(--s1);
   --text-color: #{get-value(colors, gray-3)};
   --theme-color: #{get-value(colors, iced-mocha)};
@@ -77,11 +77,11 @@ img {
 
   picture {
     --aspect-ratio: 1.5;
-    --max-width: calc((var(--measure) / 2));
+    --max-inner-width: calc((var(--measure) / 2));
 
     aspect-ratio: var(--aspect-ratio);
-    max-width: var(--max-width);
-    max-height: calc(var(--max-width) / var(--aspect-ratio));
+    max-width: var(--max-inner-width);
+    max-height: calc(var(--max-inner-width) / var(--aspect-ratio));
   }
 
   &.grid,
