@@ -3,7 +3,7 @@ layout: layouts/page
 title: Who We Are
 ---
 
-<div class="wrapper" style="--measure: var(--width-md);">
+<div class="wrapper" style="--measure: var(--max-width);">
   <section class="founders stack">
     <h2>Founders</h2>
     <div class="grid" style="--column: 40ch;">
@@ -28,14 +28,14 @@ title: Who We Are
     <h2>Facilitators</h2>
     <div class="cluster" style="--flow-space: var(--s2);">
       {%- for facilitator in internsFacilitators.facilitator %}
-        <div class="stack facilitator" style="--flow-space: var(--s1);">
+        <div class="stack facilitator" style="--flow-space: var(--s-4);">
           {% set imagePath = ["", facilitator.image] | join %}
           {% set altText = ["Headshot of ", facilitator.name, "."] | join %}
 
           {% image imagePath,
           altText %}
 
-          <h3>{{ facilitator.name }}</h3>
+          <h4>{{ facilitator.name }}</h4>
         </div>
       {% endfor %}
     </div>
@@ -45,17 +45,18 @@ title: Who We Are
     <h2>Interns</h2>
     <div class="cluster" style="--flow-space: var(--s2);">
       {%- for intern in internsFacilitators.intern %}
-        <div class="stack intern" style="--flow-space: var(--s1);">
+        <div class="stack intern" style="--flow-space: var(--s-4);">
           {% set imagePath = ["", intern.image] | join %}
           {% set altText = ["Headshot of ", intern.name, "."] | join %}
 
           {% image imagePath,
           altText %}
 
-          <h3>{{ intern.name }}</h3>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+          <h4>{{ intern.name }}</strong>
+        </h4>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
 </div>

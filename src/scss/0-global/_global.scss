@@ -18,13 +18,19 @@
   --s5: calc(var(--s4) * var(--ratio));
 
   --measure: 100rem;
-  --width-md: calc(var(--measure) / 2);
-  --width-sm: calc(var(--measure) / 3);
+  --max-width: 50rem;
   --flow-space: var(--s2);
   --text-color: #{get-value(colors, gray-3)};
   --theme-color: #{get-value(colors, iced-mocha)};
 
   font-size: calc(1rem + 0.2vw);
+}
+
+*,
+:after,
+:before {
+  font-family: inherit;
+  word-break: break-word;
 }
 
 *:focus-visible {
@@ -33,8 +39,6 @@
 
 body {
   @include color(gray-3);
-  min-height: 100vh;
-  word-break: break-word;
 }
 
 a {
@@ -50,7 +54,6 @@ ol[class],
 ul[class] {
   list-style: none;
 }
-
 
 img {
   max-height: 30rem;
@@ -73,7 +76,7 @@ img {
   padding-bottom: var(--s3);
 
   picture {
-    --aspect-ratio: 1.5
+    --aspect-ratio: 1.5;
     --max-width: calc((var(--measure) / 2));
 
     aspect-ratio: var(--aspect-ratio);

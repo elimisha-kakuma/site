@@ -5,6 +5,10 @@
   @include link;
 }
 
+.bleed {
+  --measure: calc(var(--max-width) + (var(--max-width) / 2.5));
+}
+
 .text-align\:center {
   text-align: center;
 }
