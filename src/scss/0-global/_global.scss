@@ -17,9 +17,9 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
 
-  --measure: 100rem;
+  --measure: 75rem;
   --max-width: 50rem;
-  --flow-space: var(--s2);
+  --flow-space: var(--s1);
   --text-color: #{get-value(colors, gray-3)};
   --theme-color: #{get-value(colors, iced-mocha)};
 
