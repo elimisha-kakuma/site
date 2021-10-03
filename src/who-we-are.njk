@@ -28,14 +28,14 @@ title: Who We Are
     <h2>Facilitators</h2>
     <div class="cluster" style="--flow-space: var(--s2);">
       {%- for facilitator in staff.facilitators %}
-        <div class="stack facilitator" style="--flow-space: var(--s-4);">
+        <div class="stack facilitator" style="--flow-space: var(--s1);">
           {% set imagePath = ["", facilitator.image] | join %}
           {% set altText = ["Headshot of ", facilitator.name, "."] | join %}
 
           {% image imagePath,
           altText %}
 
-          <h4>{{ facilitator.name }}</h4>
+          <h3>{{ facilitator.name }}</h3>
         </div>
       {% endfor %}
     </div>
@@ -45,15 +45,15 @@ title: Who We Are
     <h2>Interns</h2>
     <div class="cluster" style="--flow-space: var(--s3);">
       {%- for intern in staff.interns %}
-        <div class="stack intern" style="--flow-space: 0;">
+        <div class="stack intern" style="--flow-space: var(--s1);">
           {% set imagePath = ["", intern.image] | join %}
           {% set altText = ["Headshot of ", intern.name, "."] | join %}
 
           {% image imagePath,
           altText %}
 
-          <h4>{{ intern.name }}</h4>
-          <p>{{ intern.school }}</p>
+          <h3>{{ intern.name }}</h3>
+          <p style="--flow-space: 0;">{{ intern.school }}</p>
         </div>
       {% endfor %}
     </div>
