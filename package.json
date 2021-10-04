@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
+    "lite-youtube-embed": "^0.2.0",
     "sass": "^1.39.0"
   }
 }

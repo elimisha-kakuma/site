@@ -8,9 +8,16 @@ module.exports = function (config) {
   // Passthrough
   config.addPassthroughCopy("./src/js");
   config.addPassthroughCopy("./src/fonts");
-  config.addPassthroughCopy("./src/admin");
   config.addPassthroughCopy("./src/images/favicon.png");
   config.addPassthroughCopy("./src/images/logos");
+  config.addPassthroughCopy("./src/images/bahome.png");
+  config.addPassthroughCopy({
+    "./node_modules/lite-youtube-embed/src/lite-yt-embed.css":
+      "css/lite-yt.css",
+  });
+  config.addPassthroughCopy({
+    "./node_modules/lite-youtube-embed/src/lite-yt-embed.js": "js/lite-yt.js",
+  });
 
   config.addNunjucksAsyncShortcode("image", imageShortcode);
 

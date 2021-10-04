@@ -4,6 +4,9 @@
     {% include "../partials/meta.njk" %}
 
     {# Styles #}
+    <link rel="preload" as="style" href="/css/lite-yt.css"/>
+    <link rel="stylesheet" href="/css/lite-yt.css"/>
+
     <link rel="preload" as="style" href="/css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
 
@@ -14,6 +17,7 @@
         .remove("no-js")
     </script>
     <script src="/js/main.js" defer></script>
+    <script src="/js/lite-yt.js" defer></script>
   </head>
   <body>
     {# -- Header + main content -- #}
