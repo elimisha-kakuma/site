@@ -1,6 +1,6 @@
 header {
   justify-content: space-between;
-  padding-top: var(--s2);
+  padding-top: var(--s1);
   padding-bottom: var(--s3);
 
   a {
@@ -9,9 +9,5 @@ header {
 
   .stack-exception {
     --flow-space: 0;
-  }
-
-  &.cluster {
-    --pad: var(--s-1);
   }
 }
