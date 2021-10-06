@@ -4,7 +4,7 @@ const Image = require("@11ty/eleventy-img");
 function generateClassStr(classes) {
   if (!classes.length) return "";
 
-  return `${classes}`;
+  return ` class="${classes}"`;
 }
 
 // https://www.11ty.dev/docs/plugins/image/#filter-diy-picture-btn
@@ -36,7 +36,7 @@ module.exports = async function (src, alt, classes = "", sizes = "100vw") {
   const srcSet = (imageFormat) =>
     imageFormat.map((entry) => entry.srcset).join(", ");
 
-  return `<picture class="${generateClassStr(classes)}">
+  return `<picture${generateClassStr(classes)}>
     ${Object.values(metadata)
       .map((imageFormat) => {
         return `

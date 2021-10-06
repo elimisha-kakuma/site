@@ -6,7 +6,10 @@
 }
 
 .bleed {
-  --measure: calc(var(--max-inner-width) + (var(--max-inner-width) / 3));
+  margin-left: 50%;
+  max-width: var(--bleed, var(--measure));
+  transform: translateX(-50%);
+  width: 100vw;
 }
 
 .text-align\:center {

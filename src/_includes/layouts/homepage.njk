@@ -3,9 +3,7 @@
 {% block content %}
   {% include "../partials/header.njk" %}
   <main class="{{ title | slug }}">
-    {% image "/images/kakuma.jpeg",
-    "An aerial photo showing rows of homes in Kakuma refugee camp.",
-    "banner wrapper" %}
+    {% include "../partials/banner.njk" %}
     {{ content | safe }}
   </main>
 {% endblock %}

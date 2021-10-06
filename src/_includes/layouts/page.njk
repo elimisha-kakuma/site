@@ -5,11 +5,7 @@
   {% include "../partials/header.njk" %}
 
   <main class="main {{ title | slug }}">
-    {%- if imagePath -%}
-      {% image imagePath,
-      imageAltText,
-      "banner wrapper" %}
-    {% endif %}
+    {% include "../partials/banner.njk" %}
     {{ content | safe }}
   </main>
 

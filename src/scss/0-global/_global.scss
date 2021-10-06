@@ -19,9 +19,15 @@
 
   --measure: 75rem;
   --max-inner-width: 50rem;
+  --bleed: calc(var(--measure) - 2 * var(--s2));
   --flow-space: var(--s1);
-  --text-color: #{get-value(colors, gray-3)};
-  --theme-color: #{get-value(colors, iced-mocha)};
+
+  --slate-gray: #3e3d3d;
+  --light-gray: #efefee;
+  --iced-mocha: #8a6248;
+  --gray-3: #333;
+  --text-color: var(--gray-3);
+  --theme-color: var(--iced-mocha);
 
   font-size: calc(1rem + 0.2vw);
 }
@@ -38,7 +44,15 @@
 }
 
 body {
-  @include color(gray-3);
+  color: var(--text-color);
+}
+
+main > section > * {
+  max-width: var(--measure);
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -55,6 +69,10 @@ ul[class] {
   list-style: none;
 }
 
+picture {
+  overflow: hidden;
+}
+
 img {
   max-height: 30rem;
   object-fit: cover;
@@ -67,22 +85,17 @@ img {
   }
 }
 
+lite-youtube {
+  max-width: none;
+}
+
 .dark svg {
-  fill: var(--white, white);
+  fill: white;
 }
 
 .section {
   padding-top: var(--s3);
   padding-bottom: var(--s3);
-
-  picture {
-    --aspect-ratio: 1.5;
-    --max-inner-width: calc((var(--measure) / 2));
-
-    aspect-ratio: var(--aspect-ratio);
-    max-width: var(--max-inner-width);
-    max-height: calc(var(--max-inner-width) / var(--aspect-ratio));
-  }
 
   &.grid,
   .grid {

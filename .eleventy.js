@@ -8,9 +8,8 @@ module.exports = function (config) {
   // Passthrough
   config.addPassthroughCopy("./src/js");
   config.addPassthroughCopy("./src/fonts");
-  config.addPassthroughCopy("./src/images/favicon.png");
   config.addPassthroughCopy("./src/images/logos");
-  config.addPassthroughCopy("./src/images/bahome.png");
+  config.addPassthroughCopy({ "./src/images/passthrough": "images/" });
   config.addPassthroughCopy({
     "./node_modules/lite-youtube-embed/src/lite-yt-embed.css":
       "css/lite-yt.css",
