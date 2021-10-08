@@ -89,6 +89,11 @@ lite-youtube {
   max-width: none;
 }
 
+lite-youtube,
+picture:not(.banner) {
+  border-radius: var(--s-2);
+}
+
 .dark svg {
   fill: white;
 }
