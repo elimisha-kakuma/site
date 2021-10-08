@@ -19,11 +19,7 @@ module.exports = function (config) {
   });
 
   config.addNunjucksAsyncShortcode("image", imageShortcode);
-
-  // Transforms
-  if (process.env.ELEVENTY_ENV === "production") {
-    config.addTransform("htmlmin", htmlMinTransform);
-  }
+  config.addTransform("htmlmin", htmlMinTransform);
 
   return {
     templateFormats: ["html", "njk", "md"],
