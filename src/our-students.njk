@@ -2,9 +2,9 @@
 layout: layouts/page
 title: Our Students
 ---
-<section class="students stack" style="--measure: var(--max-inner-width);">
+<section class="students stack padding-bottom:var-pad" style="--measure: var(--max-inner-width); --pad: var(--s2);">
   <h2>Our Students</h2>
-  <div class="grid" style="--column: 40ch;">
+  <div class="grid" style="--column: 40ch; --pad: var(--s1);">
     {%- for student in students %}
       <div class="student stack" style="--w: 3; --h: 5;">
         {% set imagePath = [

@@ -24,6 +24,10 @@
   border-bottom: none;
 }
 
+.padding-bottom\:var-pad {
+  padding-bottom: var(--pad);
+}
+
 .font-style\:italic {
   font-style: italic;
 }
