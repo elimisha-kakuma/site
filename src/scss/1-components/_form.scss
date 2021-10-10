@@ -1,9 +1,5 @@
-@use "sass:map";
-@use "sass:math";
-@use "../tokens" as *;
-
 form {
-  max-width: math.div(map.get($tokens, breakpoints, lg), 2);
+  max-width: 36rem;
 }
 
 form,
@@ -11,13 +7,12 @@ form * {
   color: inherit;
 }
 
-label {
-  display: block;
+.no-js form {
+  display: none;
 }
 
-label,
-legend {
-  font-weight: bold;
+label {
+  display: block;
 }
 
 label[for="checkbox"],

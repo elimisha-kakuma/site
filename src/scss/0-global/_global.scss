@@ -19,7 +19,7 @@
 
   --measure: 75rem;
   --max-inner-width: 50rem;
-  --bleed: calc(var(--measure) - 2 * var(--s2));
+  --bleed: calc(var(--measuref) - 2 * var(--s2));
   --flow-space: var(--s1);
 
   --slate-gray: #3e3d3d;
@@ -80,10 +80,6 @@ img {
   object-position: 50% 30%;
   height: 100%;
   width: 100%;
-
-  .banner & {
-    min-height: 20rem;
-  }
 }
 
 lite-youtube {
@@ -92,14 +88,19 @@ lite-youtube {
 
 lite-youtube,
 lite-youtube:before,
-picture:not(.banner) {
+img {
   border-radius: var(--s-2);
+}
+
+.banner img {
+  border-radius: 0;
 }
 
 .dark svg {
   fill: white;
 }
 
+section,
 .section {
   padding-top: var(--s3);
   padding-bottom: var(--s3);
@@ -108,5 +109,43 @@ picture:not(.banner) {
   .grid {
     --column: 50ch;
     --pad: 5ch;
+  }
+
+  .bleed {
+    --measure: 58rem;
+  }
+}
+
+.student img {
+  object-position: 50% 20%;
+}
+
+.interns picture,
+.facilitators picture {
+  width: 15rem;
+}
+
+.logos {
+  &.grid {
+    align-items: center;
+    justify-content: center;
+    & > * {
+      flex-grow: 0;
+    }
+  }
+}
+
+.contact {
+  label[for="volunteer"],
+  #volunteer-options {
+    cursor: pointer;
+  }
+
+  #volunteer-options[data-is-volunteer="no"] {
+    display: none;
+  }
+
+  #volunteer-options[data-is-volunteer="yes"] {
+    display: block;
   }
 }
