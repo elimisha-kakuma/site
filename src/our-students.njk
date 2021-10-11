@@ -6,7 +6,7 @@ title: Our Students
   <h2>Our Students</h2>
   <div class="grid" style="--column: 40ch; --pad: var(--s1);">
     {%- for student in students %}
-      <div class="student stack" style="--w: 3; --h: 5;">
+      <div class="student stack" style="--w: 5; --h: 3;">
         {% set imagePath = [
           "/images/students/",
           (student.name | slug),
