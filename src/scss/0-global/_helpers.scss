@@ -5,6 +5,15 @@
   @include link;
 }
 
+.link-exception {
+  border-bottom: none;
+}
+
+.link-exception:focus {
+  outline: none;
+  border-bottom: 2px solid var(--theme-color);
+}
+
 .bleed {
   margin-left: 50%;
   max-width: var(--bleed, var(--measure));

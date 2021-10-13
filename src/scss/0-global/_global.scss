@@ -36,8 +36,9 @@
   word-break: break-word;
 }
 
-*:focus-visible {
+*:focus {
   outline: 2px solid var(--theme-color);
+  outline-offset: 0.25em;
 }
 
 body {
