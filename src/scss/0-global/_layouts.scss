@@ -77,5 +77,6 @@
 
 .icon {
   height: var(--icon-size, 1em);
+  fill: currentColor;
   width: var(--icon-size, 1em);
 }
