@@ -87,11 +87,6 @@ lite-youtube:before {
   content: none;
 }
 
-lite-youtube,
-img {
-  border-radius: var(--s-2);
-}
-
 .banner {
   --bleed: calc(var(--measure) - 2 * var(--s2));
 }
