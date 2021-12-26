@@ -63,7 +63,7 @@
   }
 
   .frame img {
-    aspect-ratio: var(--w) / var(--h);
+    aspect-ratio: var(--w, 1) / var(--h, 4);
   }
 }
 
