@@ -106,7 +106,8 @@ lite-youtube:before {
   &.grid,
   .grid {
     --column: 50ch;
-    --pad: 5ch;
+    --pad: 5rem;
+    align-items: center;
   }
 
   .bleed {
