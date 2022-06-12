@@ -2,7 +2,7 @@
 
 {% block content %}
   {% include "../partials/header.njk" %}
-  <main class="{{ title | slug }}">
+  <main class="{{ title | slugify }}">
     {% include "../partials/banner.njk" %}
     {{ content | safe }}
   </main>

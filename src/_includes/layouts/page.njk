@@ -4,7 +4,7 @@
   {# -- Header -- #}
   {% include "../partials/header.njk" %}
 
-  <main class="main {{ title | slug }}">
+  <main class="main {{ title | slugify }}">
     {% include "../partials/banner.njk" %}
     {{ content | safe }}
   </main>

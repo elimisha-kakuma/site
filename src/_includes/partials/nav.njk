@@ -3,7 +3,7 @@
     {%- for item in navigation %}
       <li>
         <a
-        class="{%- if (item.link | slug) === (page.url | slug) %}active{%-endif-%}"
+        class="{%- if (item.link | slugify) === (page.url | slugify) %}active{%-endif-%}"
         href={{item.link}}>{{item.text}}</a>
       </li>
     {% endfor %}

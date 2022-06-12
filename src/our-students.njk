@@ -9,7 +9,7 @@ title: Our Students
       <div class="student stack" style="--w: 5; --h: 3;">
         {% set imagePath = [
           "/images/students/",
-          (student.name | slug),
+          (student.name | slugify),
           ".jpeg"
         ] | join %}
         {% set altText = ["Headshot of ", student.name] | join %}
