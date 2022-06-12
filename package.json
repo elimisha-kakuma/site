@@ -24,8 +24,6 @@
     "prettier": "2.2.1"
   },
   "dependencies": {
-    "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-upgrade-help": "^1.0.1",
     "lite-youtube-embed": "^0.2.0",
     "sass": "^1.39.0"
   }
