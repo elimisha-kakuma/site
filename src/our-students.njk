@@ -5,21 +5,17 @@ title: Our Students
 <section class="students stack padding-bottom:var-pad" style="--measure: var(--max-inner-width); --pad: var(--s2);">
   <h2>Our Students</h2>
   <div class="grid" style="--column: 40ch; --pad: var(--s1);">
-    {%- for student in students %}
+    {%- for student in collections.students %}
       <div class="student stack" style="--w: 5; --h: 3;">
-        {% set imagePath = [
-          "/images/students/",
-          (student.name | slugify),
-          ".jpeg"
-        ] | join %}
-        {% set altText = ["Headshot of ", student.name] | join %}
-
-        {% image imagePath,
-        altText,
-        "frame" %}
-        <h3>{{ student.name }}</h3>
+        {%-if student.data.image -%}
+          {% set altText = ["Headshot of ", student.data.name] | join %}
+          {% image student.data.image,
+          altText,
+          "frame" %}
+        {% endif %}
+        <h3>{{ student.data.name }}</h3>
         <div class="student__bio accordion stack">
-          {{ student.bio | safe }}
+          {{ student.templateContent | safe }}
           <button class="accordion__button">More [+]</button>
         </div>
       </div>
