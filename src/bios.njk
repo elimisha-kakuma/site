@@ -1,5 +1,0 @@
-{%- for student in collections.students -%}
-  <p>{{ student.outputPath }}</p>
-  <p>{{ student.fileSlug }}</p>
-  {{ student.templateContent | safe }}
-{% endfor %}
