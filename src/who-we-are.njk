@@ -7,19 +7,17 @@ title: Who We Are
   <section class="founders stack">
     <h2>Founders</h2>
     <div class="grid" style="--column: 40ch;">
-      {%- for founder in staff.founders %}
+      {%- for founder in collections.sortedFounders %}
         <div class="stack founder">
-          {% set imagePath = ["", founder.image] | join %}
-          {% set altText = ["Headshot of ", founder.name, "."] | join %}
-          {% set cssClasses = "square" -%}
-
-          {% image imagePath,
-          altText,
-          "frame" %}
-
-          <h3>{{ founder.name }}
-            <span class="pronouns">({{founder.pronouns}})</span></h3>
-          <div class="bio stack">{{founder.bio | safe}}</div>
+          {%-if founder.data.image -%}
+            {% set altText = ["Headshot of ", founder.data.name, "."] | join %}
+            {% image founder.data.image,
+            altText,
+            "frame" %}
+          {% endif %}
+          <h3>{{ founder.data.name }}
+            <span class="pronouns">({{founder.data.pronouns}})</span></h3>
+          <div class="bio stack">{{founder.templateContent | safe}}</div>
         </div>
       {% endfor %}
     </div>
@@ -28,17 +26,18 @@ title: Who We Are
   <section class="facilitators stack section">
     <h2>Facilitators</h2>
     <div class="cluster" style="--flow-space: var(--s2);">
-      {%- for facilitator in staff.facilitators %}
-        <div class="stack facilitator" style="--flow-space: var(--s1);">
-          {% set imagePath = ["", facilitator.image] | join %}
-          {% set altText = ["Headshot of ", facilitator.name, "."] | join %}
-
-          {% image imagePath,
-          altText,
-          "frame" %}
-
-          <h3>{{ facilitator.name }}</h3>
-        </div>
+      {%-for facilitator in collections.staff-%}
+        {%-if facilitator.data.tags.includes("facilitators")-%}
+          <div class="stack facilitator" style="--flow-space: var(--s1);">
+            {%-if facilitator.data.image -%}
+              {% set altText = ["Headshot of ", facilitator.data.name, "."] | join %}
+              {% image facilitator.data.image,
+              altText,
+              "frame" %}
+            {% endif %}
+            <h3>{{ facilitator.data.name }}</h3>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </section>
@@ -46,18 +45,21 @@ title: Who We Are
   <section class="interns stack section">
     <h2>Interns</h2>
     <div class="cluster" style="--flow-space: var(--s3);">
-      {%- for intern in staff.interns %}
-        <div class="stack intern" style="--flow-space: var(--s1);">
-          {% set imagePath = ["", intern.image] | join %}
-          {% set altText = ["Headshot of ", intern.name, "."] | join %}
-
-          {% image imagePath,
-          altText,
-          "frame" %}
-
-          <h3>{{ intern.name }}</h3>
-          <p style="--flow-space: 0;">{{ intern.school }}</p>
-        </div>
+      {%-for intern in collections.staff-%}
+        {%-if intern.data.tags.includes("interns")-%}
+          <div class="stack intern" style="--flow-space: var(--s1);">
+            {%-if intern.data.image -%}
+              {% set altText = ["Headshot of ", intern.data.name, "."] | join %}
+              {% image intern.data.image,
+              altText,
+              "frame" %}
+            {% endif %}
+            <h3>{{ intern.data.name }}</h3>
+            {%-if intern.data.school -%}
+              <p style="--flow-space: 0;">{{ intern.data.school }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </section>

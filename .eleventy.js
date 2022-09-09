@@ -1,5 +1,6 @@
 const imageShortcode = require("./src/shortcodes/image");
 const htmlMinTransform = require("./src/transforms/html-min-transform");
+const markdownIt = require("markdown-it");
 
 module.exports = function (config) {
   // Sass
@@ -20,6 +21,20 @@ module.exports = function (config) {
 
   config.addNunjucksAsyncShortcode("image", imageShortcode);
   config.addTransform("htmlmin", htmlMinTransform);
+
+  let markdownOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+
+  config.setLibrary("md", markdownIt(markdownOptions));
+
+  config.addCollection("sortedFounders", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("founders")
+      .sort((a, b) => a.data.order - b.data.order);
+  });
 
   return {
     templateFormats: ["html", "njk", "md"],
