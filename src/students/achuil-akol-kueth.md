@@ -1,6 +1,7 @@
 ---
 name: Achuil Akol Kueth
 image: /images/students/achuil-akol-kueth.jpeg
+currentStudent: true
 ---
 
 My name's Achuil Akol Kueth from South Sudan, but have been in the camp for 10 years now following the civil war in South Sudan. It was in Kakuma, that I I have been in Kakuma for 9 years where I completed my primary and secondary education.

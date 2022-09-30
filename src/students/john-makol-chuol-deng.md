@@ -1,6 +1,7 @@
 ---
 name: Makol Deng
 image: /images/students/john-makol-chuol-deng.jpeg
+currentStudent: true
 ---
 
 My name is Makol Deng. I was born in South Sudan, in a small village in central Bahr el Ghazal. Both my parents were South Sudanese. My dad was a soldier whom I rarely saw. I was barely 10 years old when he was killed. Due to domestic family problems, I lived with my grandmother for most of my early childhood. Growing up she has always taught me to be industrious, committed to whatever I started, to be resilient and to always believe in myself. She always spoke with utmost kindness. My main job was to take care of her animals in the village. After what felt like forever of war, I decided to seek refuge in Kenya’s Kakuma Refugee Camp. I arrived on January 22nd of 2012.
