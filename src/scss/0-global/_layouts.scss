@@ -27,6 +27,10 @@
   & > * {
     flex: 1 1 var(--column, auto);
   }
+
+  & > *:nth-last-child(1):nth-child(odd) {
+    flex-grow: 0;
+  }
 }
 
 .frame {

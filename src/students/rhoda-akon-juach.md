@@ -1,6 +1,8 @@
 ---
 name: Juach Rhoda Akon
 image: /images/students/rhoda-akon-juach.jpeg
+currentStudent: false
+college: University of Calgary
 ---
 
 My name is Juach Rhoda Akon, a South Sudanese by nationality and from South Sudan. I am the first born out of five children,raised by a single mother,from an extended family. My mother,siblings and I moved into Kakuma Camp on the 29th of January, 2002-- the same year we were registered as refugees. We have been living in the camp, roughly twenty years. Since the day I came into the camp, I have faced a lot of challenges such as inadequate food, lack of money to buy basic needs such as clothing, harsh weather conditions and external attacks from the host community. All in all, I congratulate myself for having overcome these struggles and hardships. My role model is my own mother. This is the only person who will stretch beyond her limits in order to safeguard her children. It is her genuine love and sacrifice that inspires me to work harder in order to come to the rescue of other neglected children. Some of my interests include music, writing and literacy. Furthermore, I am very passionate about giving back positively to my society, a society which has brought me up in an upright way. My hobbies include taking part in charity work, reading novels, listening to music, and dancing. If given a chance to pursue further education, my interests include earning a Bachelors of Arts in music,International Relations or Law. I would like to take on any of the above majors because they will give me a higher chance of changing people's mindsets, views and negative opinions.

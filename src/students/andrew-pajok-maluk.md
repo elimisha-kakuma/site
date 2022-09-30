@@ -1,6 +1,8 @@
 ---
 name: Andrew Pajok Maluk
 image: /images/students/andrew-pajok-maluk.jpeg
+currentStudent: false
+college: University of Tulsa
 ---
 
 My name is Andrew Pajok Maluk, and I am the second born of seven children. I’m South Sudanese by nationality. I made it to Kakuma Refugee camp in February 2006 after my father had come here for medication and met my uncle who had fled to Kakuma during the Bor Massacre in 1991.

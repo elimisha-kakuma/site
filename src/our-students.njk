@@ -6,19 +6,21 @@ title: Our Students
   <h2>Our Students</h2>
   <div class="grid" style="--column: 40ch; --pad: var(--s1);">
     {%- for student in collections.students %}
-      <div class="student stack" style="--w: 5; --h: 3;">
-        {%-if student.data.image -%}
-          {% set altText = ["Headshot of ", student.data.name] | join %}
-          {% image student.data.image,
-          altText,
-          "frame" %}
-        {% endif %}
-        <h3>{{ student.data.name }}</h3>
-        <div class="student__bio accordion stack">
-          {{ student.templateContent | safe }}
-          <button class="accordion__button">More [+]</button>
+      {%- if student.data.currentStudent %}
+        <div class="student stack" style="--w: 5; --h: 3;">
+          {%-if student.data.image -%}
+            {% set altText = ["Headshot of ", student.data.name] | join %}
+            {% image student.data.image,
+            altText,
+            "frame" %}
+          {% endif %}
+          <h3>{{ student.data.name }}</h3>
+          <div class="student__bio accordion stack">
+            {{ student.templateContent | safe }}
+            <button class="accordion__button">More [+]</button>
+          </div>
         </div>
-      </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

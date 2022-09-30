@@ -1,6 +1,8 @@
 ---
 name: Grace Amer Bech
 image: /images/students/grace-amer-bech.jpeg
+currentStudent: false
+college: Dartmouth College
 ---
 
 My name is Grace Amer Bech. I am a South Sudanese girl living in Kakuma Refugee Camp. In the year 2007, after a series of brutal wars, my sister and I left our family in South Sudan to come to Kakuma Refugee Camp with my uncle to access education and safety. The rest of my family later resettled in Nyumanzi Refugee Resettlement Camp in Northern Uganda in the year 2014 after another civil war erupted in 2013. During my sophomore year of high school, another coup attempt happened in South Sudan, which caused massive loss of lives, properties, and other essential valuables. I had to drop out of school since my uncle was left bankrupt in the aftermath. With my inborn grit, I managed to overcome this challenge and pursued my education. I sought help from friends who had similar problems and I was able to attend school through sports. I got a football scholarship, through which I managed to graduate from high school with good grades. My resilience and determination have always been evident throughout my academic journey.
