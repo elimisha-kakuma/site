@@ -3,7 +3,7 @@ name: Achuil Akol Kueth
 image: /images/students/achuil-akol-kueth.jpeg
 ---
 
-My name's Achuil Akol Kueth from South Sudan and the civil war forced me to seek asylum as a refugee in Kenya. I have been in Kakuma for 9 years where I completed my primary and secondary education.
+My name's Achuil Akol Kueth from South Sudan, but have been in the camp for 10 years now following the civil war in South Sudan. It was in Kakuma, that I I have been in Kakuma for 9 years where I completed my primary and secondary education.
 
 I was the third born child in my family of four siblings, and we lived with my parents in South Sudan. Due to the very long civil war in Sudan, I lost my parents and my siblings. For now, I may say I'm living with my cousins, and luckily the UN became my second parents, who can give me food and shelter.
 
