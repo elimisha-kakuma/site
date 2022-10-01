@@ -15,10 +15,9 @@ title: Our Students
             "frame" %}
           {% endif %}
           <h3>{{ student.data.name }}</h3>
-          <div class="student__bio accordion stack">
+          <read-more class="student__bio stack">
             {{ student.templateContent | safe }}
-            <button class="accordion__button">More [+]</button>
-          </div>
+          </read-more>
         </div>
       {% endif %}
     {% endfor %}

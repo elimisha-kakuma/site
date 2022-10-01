@@ -23,26 +23,31 @@ title: Who We Are
     </div>
   </section>
 
-  <section class="facilitators stack section">
-    <h2>Facilitators</h2>
+  <section class="stack section staff">
+    <h2>Academic Team</h2>
     <div class="cluster" style="--flow-space: var(--s2);">
-      {%-for facilitator in collections.staff-%}
-        {%-if facilitator.data.tags.includes("facilitators")-%}
-          <div class="stack facilitator" style="--flow-space: var(--s1);">
-            {%-if facilitator.data.image -%}
-              {% set altText = ["Headshot of ", facilitator.data.name, "."] | join %}
-              {% image facilitator.data.image,
+      {%-for staff in collections.staff-%}
+        {%-if staff.data.tags.includes("academic-team")-%}
+          <div class="stack" style="--flow-space: var(--s1);">
+            {%-if staff.data.image -%}
+              {% set altText = ["Headshot of ", staff.data.name, "."] | join %}
+              {% image staff.data.image,
               altText,
               "frame" %}
             {% endif %}
-            <h3>{{ facilitator.data.name }}</h3>
+            <h3>{{ staff.data.name }}</h3>
+            {%-if staff.templateContent -%}
+              <read-more class="stack">
+                {{ staff.templateContent | safe }}
+              </read-more>
+            {% endif %}
           </div>
         {% endif %}
       {% endfor %}
     </div>
   </section>
 
-  <section class="interns stack section">
+  {# <section class="interns stack section">
     <h2>Interns</h2>
     <div class="cluster" style="--flow-space: var(--s3);">
       {%-for intern in collections.staff-%}
@@ -62,6 +67,6 @@ title: Who We Are
         {% endif %}
       {% endfor %}
     </div>
-  </section>
+  </section> #}
 
 </div>

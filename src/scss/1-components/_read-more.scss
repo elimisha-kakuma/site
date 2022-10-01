@@ -1,5 +1,7 @@
-.accordion {
-  button {
+read-more {
+  display: block;
+
+  .read-more__button {
     --flow-space: var(--s-1);
 
     background: none;
@@ -14,25 +16,15 @@
   }
 
   &:not(.expanded) {
-    p:first-child {
+    *:first-child {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 5;
       overflow: hidden;
     }
 
-    p + p {
+    * + *:not(.read-more__button) {
       display: none;
-    }
-  }
-
-  .no-js & {
-    button {
-      display: none;
-    }
-
-    p {
-      display: block !important;
     }
   }
 }
