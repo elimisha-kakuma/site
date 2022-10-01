@@ -3,70 +3,74 @@ layout: layouts/page
 title: Who We Are
 ---
 
-<div class="wrapper" style="--measure: var(--max-inner-width); --w: 1; --h: 1;">
-  <section class="founders stack">
-    <h2>Founders</h2>
-    <div class="grid" style="--column: 40ch;">
-      {%- for founder in collections.sortedFounders %}
-        <div class="stack founder">
-          {%-if founder.data.image -%}
-            {% set altText = ["Headshot of ", founder.data.name, "."] | join %}
-            {% image founder.data.image,
+<section class="founders stack section" style="--measure: var(--max-inner-width); --pad: var(--s2);">
+  <h2>Founders</h2>
+  <div class="grid" style="--column-min: 22rem; --w: 1; --h: 1;">
+    {%- for founder in collections.sortedFounders %}
+      <div class="stack founder">
+        {%-if founder.data.image -%}
+          {% set altText = ["Headshot of ", founder.data.name, "."] | join %}
+          {% image founder.data.image,
+          altText,
+          "frame" %}
+        {% endif %}
+        <h3>{{ founder.data.name }}
+          <span class="pronouns">({{founder.data.pronouns}})</span></h3>
+        <div class="bio stack">{{founder.templateContent | safe}}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="staff stack section" style="--measure: var(--max-inner-width); --pad: var(--s2);">
+  <h2>Academic Team</h2>
+  <div class="grid" style="--flow-space: var(--s2); --w: 1; --h: 1;">
+    {%-for staff in collections.staff-%}
+      {%-if staff.data.tags.includes("academic-team")-%}
+        <div class="stack" style="--flow-space: var(--s1);">
+          {%-if staff.data.image -%}
+            {% set altText = ["Headshot of ", staff.data.name, "."] | join %}
+            {% image staff.data.image,
             altText,
             "frame" %}
           {% endif %}
-          <h3>{{ founder.data.name }}
-            <span class="pronouns">({{founder.data.pronouns}})</span></h3>
-          <div class="bio stack">{{founder.templateContent | safe}}</div>
+          <h3>{{ staff.data.name }}</h3>
+          {%-if staff.templateContent -%}
+            <read-more class="stack">
+              {{ staff.templateContent | safe }}
+            </read-more>
+          {% endif %}
         </div>
-      {% endfor %}
-    </div>
-  </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="stack section staff">
-    <h2>Academic Team</h2>
-    <div class="cluster" style="--flow-space: var(--s2);">
-      {%-for staff in collections.staff-%}
-        {%-if staff.data.tags.includes("academic-team")-%}
-          <div class="stack" style="--flow-space: var(--s1);">
-            {%-if staff.data.image -%}
-              {% set altText = ["Headshot of ", staff.data.name, "."] | join %}
-              {% image staff.data.image,
-              altText,
-              "frame" %}
-            {% endif %}
-            <h3>{{ staff.data.name }}</h3>
-            {%-if staff.templateContent -%}
-              <read-more class="stack">
-                {{ staff.templateContent | safe }}
-              </read-more>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-
-  {# <section class="interns stack section">
-    <h2>Interns</h2>
-    <div class="cluster" style="--flow-space: var(--s3);">
-      {%-for intern in collections.staff-%}
-        {%-if intern.data.tags.includes("interns")-%}
-          <div class="stack intern" style="--flow-space: var(--s1);">
-            {%-if intern.data.image -%}
-              {% set altText = ["Headshot of ", intern.data.name, "."] | join %}
-              {% image intern.data.image,
-              altText,
-              "frame" %}
-            {% endif %}
-            <h3>{{ intern.data.name }}</h3>
-            {%-if intern.data.school -%}
-              <p style="--flow-space: 0;">{{ intern.data.school }}</p>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section> #}
-
-</div>
+<section class="staff stack section" style="--measure: var(--max-inner-width); --pad: var(--s2);">
+  <h2>Marketing Team</h2>
+  <div class="grid" style="--flow-space: var(--s2); --w: 1; --h: 1;">
+    {%-for staff in collections.staff-%}
+      {%-if staff.data.tags.includes("marketing-team")-%}
+        <div class="stack" style="--flow-space: var(--s1);">
+          {%-if staff.data.image -%}
+            {% set altText = ["Headshot of ", staff.data.name, "."] | join %}
+            {% image staff.data.image,
+            altText,
+            "frame" %}
+          {% else %}
+            {% set altText = ["Silhouetted placeholder image of a person for ", staff.data.name, "."] | join %}
+            {% image "/images/passthrough/placeholder.jpeg",
+            altText,
+            "frame" %}
+          {% endif %}
+          <h3>{{ staff.data.name }}</h3>
+          {%-if staff.templateContent -%}
+            <read-more class="stack">
+              {{ staff.templateContent | safe }}
+            </read-more>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

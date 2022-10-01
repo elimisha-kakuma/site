@@ -4,7 +4,7 @@ title: Our Students
 ---
 <section class="students stack padding-bottom:var-pad" style="--measure: var(--max-inner-width); --pad: var(--s2);">
   <h2>Our Students</h2>
-  <div class="grid" style="--column: 40ch; --pad: var(--s1);">
+  <div class="flex-grid" style="--column: 40ch; --pad: var(--s1);">
     {%- for student in collections.students %}
       {%- if student.data.currentStudent %}
         <div class="student stack" style="--w: 5; --h: 3;">

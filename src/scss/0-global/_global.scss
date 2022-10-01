@@ -103,8 +103,8 @@ lite-youtube:before {
   padding-top: var(--s3);
   padding-bottom: var(--s3);
 
-  &.grid,
-  .grid {
+  &.flex-grid,
+  .flex-grid {
     --column: 50ch;
     --pad: 5rem;
     align-items: center;
@@ -120,13 +120,8 @@ lite-youtube:before {
   object-position: 50% 20%;
 }
 
-.interns picture,
-.staff picture {
-  width: 15rem;
-}
-
 .logos {
-  &.grid {
+  &.flex-grid {
     align-items: center;
     justify-content: center;
     & > * {
