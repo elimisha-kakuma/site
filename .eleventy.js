@@ -15,6 +15,7 @@ module.exports = function (config) {
     "./node_modules/lite-youtube-embed/src/lite-yt-embed.css":
       "css/lite-yt.css",
   });
+
   config.addPassthroughCopy({
     "./node_modules/lite-youtube-embed/src/lite-yt-embed.js": "js/lite-yt.js",
   });

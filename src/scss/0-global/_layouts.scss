@@ -19,6 +19,18 @@
 }
 
 .grid {
+  --column-gap: var(--s0);
+  --column-min: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--column-min), 100%), 1fr)
+  );
+  gap: var(--column-gap);
+}
+
+.flex-grid {
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--pad, var(--s1));
