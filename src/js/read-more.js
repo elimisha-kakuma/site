@@ -70,13 +70,14 @@ class ReadMore extends HTMLElement {
 
   render() {
     let renderedHtml = this.innerHTML;
-    // If the scrollHeight of the first paragraph is greater than the clientHeight (the line-clamped height), show the button.
-    const hasButton =
-      this.children[0]?.scrollHeight > this.children[0]?.clientHeight;
-    if (hasButton) {
-      renderedHtml = `${renderedHtml}<button class="read-more__button">${this.getButtonText()}</button>`;
-    }
-    this.innerHTML = renderedHtml;
+    // // If the scrollHeight of the first paragraph is greater than the clientHeight (the line-clamped height), show the button.
+    // const hasButton =
+    //   this.children[0]?.scrollHeight > this.children[0]?.clientHeight;
+    // console.log("hasButton?", hasButton);
+    // if (hasButton) {
+    //   renderedHtml = `${renderedHtml}<button class="read-more__button">${this.getButtonText()}</button>`;
+    // }
+    this.innerHTML = `${renderedHtml}<button class="read-more__button">${this.getButtonText()}</button>`;
     this.postRender();
   }
 
