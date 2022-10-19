@@ -1,0 +1,11 @@
+---
+name: Makuach Teny Gatluak
+image: /images/students/makuach-teny-gatluak.jpg
+currentStudent: true
+---
+
+My name is Makuach Teny Gatluak, and I am the third-born in a family of nine. I was born in Gambella, Ethiopia, but spent barely a quarter of my life in my home country. My family and I fled home in 2006 due to harmful cultural practices like forced early marriage and gender inequality. My mother was a victim of such practices. She was forcefully married to an elderly village man despite her fondness for being with my dad. Being a resilient and opinionated woman, she ran away with my dad and started our family. That was considered an act of humiliation to the older man's family. In response, they plotted an attack on my family. My dad was left fighting them as we ran away; we never heard from him again. We wandered until my mom led us to the Kakuma refugee camp for refuge. I was bedridden from chicken pox when we fled home. Coming to the Kakuma refugee camp was a life-changing moment for me. I was admitted to the main hospital for medication and was able to heal.
+
+Growing up as a sick child in a coercive community with a single mom made me prudent. Education became my only lifeline to creating a better future for my family. I strived hard in school and attained grades which were good enough to go to university, but financial support has been challenging.
+
+I have taught as a volunteer teacher in Greenlight secondary school for the last two years while at the same time participating in online free programs through Coursera to build my digital and analytical skills by doing a Google data analysis certificate. Having had an experience with health difficulties in my early childhood inspires me to be a medical practitioner in the future. As a volunteer teacher, I spend most of my time researching and advancing my chemistry and biology knowledge. I find it fascinating how neurogenesis happens - the thought that the human brain only needs the grit to connect ideas; it's just prodigious! I am also passionate about basketball. I played as a "Big man" in high school. My greatest inspiration is the late Kobe Bryant, who constantly talked about having a strong growth mindset and the mentality to improve and become better every day – “Mamba Mentality.”

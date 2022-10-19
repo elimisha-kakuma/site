@@ -1,5 +1,5 @@
 ---
-name: Aida
+name: Aida Shakeri
 image: /images/staff/aida.jpg
 ---
 
